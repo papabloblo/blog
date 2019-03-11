@@ -1,0 +1,75 @@
+---
+title: "Newtral-8M"
+author: "Pablo Hidalgo"
+date: "11/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Alberto Cairo en su libro *The functional art* habla de cinco principios  que deben seguir un gráfico. 
+
+Quizá, los dos principales y que se espera que siga cualquier visualización son los dos primeros: que un gráfico sea veraz (*truthful*) y que sea funcional.
+
+El otro día me encontraba con este gráfico acerca de las manifestaciones del 8M. (Fuente original aquí: https://newtral.es/actualidad/manifestaciones-del-8-m-los-datos-de-asistencia/)
+
+![](https://newtral.es/wp-content/uploads/2019/03/Captura-de-pantalla-2019-03-09-a-las-12.12.10.png)
+
+
+
+Obviamente, no pongo en duda la veracidad de los datos que aporta. Pero sí creo que se puede trabajar algo más para que el gráfico sea mejor desde un punto de vista funcional.
+
+Tal cual está el gráfico permite saber rápidamente que Madrid es la ciudad en la que mayor afluencia tuvieron las manifestaciones del 8M. Sin embargo, hay algunas preguntas que podríamos repsonder fácilmente simplemente cambiando el tipo de gráfico.
+
+Un primer defecto del gráfico es **el orden en el que aparecen las ciudades**. A priori (que alguin me corrija) no parece que haya un orden especial. Ya que el gráfico intenta responder a la participación, quizá una ordenación más lógica (siempre desde un punto de vista funcional) es de mayor a menor afluencia en la manifestación del 8M.
+
+```{r}
+participacion <- tibble::tibble(
+  ciudad = c(
+    "Madrid",
+    "Madrid",
+    "Barcelona",
+    "Barcelona",
+    "Sevilla",
+    "Sevilla",
+    "Valencia",
+    "Valencia",
+    "Valladolid",
+    "Valladolid",
+    "Bilbao",
+    "Bilbao",
+    "Vigo",
+    "Vigo"
+    ),
+  anyo = rep(c(2018, 2019), 7),
+  asistencia = c(
+    170000,
+    350000,
+    
+    200000,
+    200000,
+    
+    30000,
+    50000,
+    
+    80000,
+    120000,
+    
+    14000,
+    25000,
+    
+    60000,
+    50000,
+    
+    45000,
+    105000
+  )
+)
+```
+
+
+
+
+
