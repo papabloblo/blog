@@ -370,7 +370,8 @@ partidos_porc <- elecciones %>%
   labs(
     x = "",
     y = "",
-    title = "El PACMA pasaría de 0 a 4 diputados"
+    title = "El PACMA pasaría de 0 a 4 diputados",
+    subtitle= "Llegaría a ser la décima fuerza política"
     ) +
     scale_x_discrete(
       labels = c("votos_porc" = "Votos\nobtenidos",
