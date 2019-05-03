@@ -402,7 +402,7 @@ elecciones %>%
   geom_point(alpha = 0.25, size = 3, stroke = 0) +
   geom_point(data = elecciones %>% filter(partido == "PSOE"), alpha = 0.7, size = 3, stroke = 0) +
   geom_abline(intercept = 0, slope = 1) +
-  geom_smooth() +
+  # geom_smooth(alpha = 0) +
   tema
 
 

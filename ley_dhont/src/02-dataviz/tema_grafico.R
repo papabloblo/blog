@@ -10,7 +10,7 @@ tema <- theme_minimal(base_family = "sans") +
                                margin = margin(b=5),
                                color = "#5a5050"
     ),
-    plot.caption = element_text(family="Poiret One",
+    plot.caption = element_text(family="sans",
                                 face = "bold",
                                 size = 12, 
                                 margin = margin(b = 5),

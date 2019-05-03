@@ -21,8 +21,7 @@ library(tidyverse)
 # IMPORTACIÓN DEL CSV -----------------------------------------------------
 
 
-
-elec_2019 <- readr::read_csv2("ley_dhont/data/raw/des-con2.csv",
+elec_2019_2016 <- readr::read_csv2("ley_dhont/data/raw/des-con2.csv",
                               col_types = cols(
                                 `Candidaturas 2019` = col_character(),
                                 `Votos 2019`        = col_integer(),
@@ -38,7 +37,7 @@ elec_2019 <- readr::read_csv2("ley_dhont/data/raw/des-con2.csv",
 
 # CAMBIO DE NOMBRE DE LAS VARIABLES ---------------------------------------
 
-elec_2019 <- elec_2019 %>% 
+elec_2019_2016 <- elec_2019_2016 %>% 
   rename(
     partido_2019    = `Candidaturas 2019`,
     votos_2019      = `Votos 2019`, 
@@ -52,38 +51,6 @@ elec_2019 <- elec_2019 %>%
   )
 
 
-
-# REESTRUCTURACIÓN --------------------------------------------------------
-
-elec_2016 <- elec_2019 %>% 
-  select(
-    partido_2016, 
-    votos_2016, 
-    votos_2016_porc,
-    diputados_2016
-    ) %>% 
-  mutate(
-    anyo = 2016L
-  )
-
-names(elec_2016) <- str_remove(names(elec_2016), "_2016")
-
-elec_2019 <- elec_2019 %>% 
-  select(
-    partido_2019, 
-    votos_2019, 
-    votos_2019_porc,
-    diputados_2019
-  ) %>% 
-  mutate(
-    anyo = 2019L
-  )
-
-names(elec_2019) <- str_remove(names(elec_2019), "_2019")
-
-elecciones <- bind_rows(elec_2019, elec_2016)
-
-
 # EXPORTACIÓN -------------------------------------------------------------
 
-readr::write_rds(elecciones, "ley_dhont/data/elecciones.rds")
+readr::write_rds(elec_2019_2016, "ley_dhont/data/des-con.rds")
