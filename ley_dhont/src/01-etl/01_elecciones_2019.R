@@ -15,7 +15,6 @@
 
 # DEPENDECIAS -------------------------------------------------------------
 
-library(readr)
 library(tidyverse)
 
 # IMPORTACIÓN DEL CSV -----------------------------------------------------
@@ -35,22 +34,16 @@ elec_2019_2016 <- readr::read_csv2("ley_dhont/data/raw/des-con2.csv",
                               )  
 
 
-# CAMBIO DE NOMBRE DE LAS VARIABLES ---------------------------------------
-
-elec_2019_2016 <- elec_2019_2016 %>% 
+elec_2019 <- elec_2019_2016 %>% 
+  select(contains("2019")) %>% 
   rename(
     partido_2019    = `Candidaturas 2019`,
     votos_2019      = `Votos 2019`, 
     votos_2019_porc = `%  2019`,
-    diputados_2019  = `Diputados/as 2019`,
-    
-    partido_2016    = `Candidaturas 2016`,
-    votos_2016      = `Votos 2016`, 
-    votos_2016_porc = `%  2016`,
-    diputados_2016  = `Diputados/as 2016`
+    diputados_2019  = `Diputados/as 2019`
   )
 
 
 # EXPORTACIÓN -------------------------------------------------------------
 
-readr::write_rds(elec_2019_2016, "ley_dhont/data/des-con.rds")
+readr::write_rds(elec_2019, "ley_dhont/data/elecciones_2019_0.rds")

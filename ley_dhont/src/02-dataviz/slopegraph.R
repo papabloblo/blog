@@ -179,6 +179,16 @@ gridlines_diputados <- tibble(
 elecciones_slope <- elecciones_slope %>% 
   filter(porc < 10/350)
 
+elecciones <- elecciones %>% 
+  mutate(nudge_y =  case_when(
+    partido == "PP" ~ 0.005,
+    partido == "Cs" ~ -0.005,
+    partido == "VOX" ~ -0.004,
+    partido == "FRONT REPUBLICÀ" ~ 0.0005,
+    partido == "BNG" ~ -0.0001,
+    TRUE ~ 0
+  )
+  )
 
 p <- elecciones_slope %>% 
   ggplot(
@@ -196,7 +206,7 @@ p <- elecciones_slope %>%
     linetype = "dashed"
   ) +
   
-  ggrepel::geom_label_repel(
+  geom_label(
     data = gridlines_diputados,
     aes(y = diputado_porc,
         x     = "diputados_porc",
@@ -243,7 +253,7 @@ p <- p +
     
     aes(
       x = "votos_porc",
-      y = votos_porc, 
+      y = votos_porc + nudge_y, 
       label = partido_etiqueta
     ),
     hjust = 0,
@@ -279,10 +289,6 @@ ggsave("ley_dhont/dataviz/slopegraph_pacma.png", plot = p, dpi = 400, width = 20
 
 
 # SLOPEGRAPH GLOBAL ANOTACIÓN ---------------------------------------------
-
-
-
-
 
 gridlines_diputados <- tibble(
   y = seq(0, 125, by = 25),
@@ -354,14 +360,23 @@ p <- p +
     )
   ) 
 
+elecciones <- elecciones %>% 
+  mutate(nudge_y =  case_when(
+    partido == "PP" ~ 0.005,
+    partido == "Cs" ~ -0.005,
+    partido == "VOX" ~ -0.004,
+    TRUE ~ 0
+  )
+  )
+
 p <- p +
-  ggrepel::geom_label_repel(
+  geom_label(
     data = elecciones %>% 
       filter(partido %in% partidos_annotate),
     
     aes(
       x = "votos_porc",
-      y = votos_porc, 
+      y = votos_porc + nudge_y, 
       label = partido_etiqueta
     ),
     hjust = 0,
@@ -371,13 +386,14 @@ p <- p +
     nudge_x = 0.1
   )
 
-
 p <- p +
   labs(
     x = "",
     y = "",
     title = "Unidas Podemos y Vox obtendrían \nmás diputados",
-    caption = "@papabloblog"
+
+    subtitle = "Elecciones generales del 28 de abril de 2019.\n\nAunque los diputados no se pueden repartir en forma decimal,\nse ha respetado la proporción a efectos ilustrativos",
+    caption = "Fuente: Ministerio del Interior\n\n@papabloblog"
   ) +
   scale_x_discrete(
     labels = c("votos_porc" = "Diputados proporcionales\na los votos",
@@ -394,4 +410,5 @@ p <- p +
   )
 
 ggsave("ley_dhont/dataviz/slopegraph_global2.png", plot = p, dpi = 400, width = 20, height = 30, units = "cm")
+ggsave("ley_dhont/dataviz/slopegraph_global2.svg", plot = p, dpi = 400, width = 20, height = 30, units = "cm")
 
