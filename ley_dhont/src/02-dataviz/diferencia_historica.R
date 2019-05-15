@@ -123,15 +123,15 @@ p <- p +
                  stroke = mayoria_absoluta),
              size = 4,
              stroke = 0
-             ) +
-geom_point(data = elecciones_anotacion %>%
-             filter(mayoria_absoluta == 1), 
-           aes(color = partido),
-           shape = 21,
-           fill = "white",
-           size = 4,
-           stroke = 2
-)
+             ) #+
+# geom_point(data = elecciones_anotacion %>%
+#              filter(mayoria_absoluta == 1), 
+#            aes(color = partido),
+#            shape = 21,
+#            fill = "white",
+#            size = 4,
+#            stroke = 2
+# )
 
 # Anotación con etiquetas
 
@@ -166,52 +166,52 @@ p <- p +
              label.size = 0
   )
 
-# MAE
-p <- p +
-  geom_line(data = mae,
-            aes(y = mae, group = 1),
-            alpha = 1,
-            size  = .5,
-            color = "#5a5050"
-  ) +
-  
-  geom_label(data = mae , 
-             aes(y = mae, 
-                 label = mae
-             ),
-             color = "#5a5050",
-             # nudge_x = -0.5,
-             label.size = 0,
-             size = 3
-  ) +
-  
-  # geom_point(data = mae, 
-  #            aes(y = mae),
-  #            size = 4,
-  #            stroke = 0
-  # ) +
-  geom_label(data = mae %>% 
-               filter(anyo == 2019), 
-             aes(y = mae, 
-                 label = "MAE"
-                 ),
-             nudge_x = -0.5,
-             label.size = 0,
-             size = 3,
-             color = "#5a5050"
-  ) +
-  geom_label(data = mae %>%
-               filter(anyo == 1977), 
-             
-             aes(y = mae, 
-                 label = "MAE"
-                 ),
-             
-             nudge_x = 0.5,
-             label.size = 0,
-             size = 3,
-             color = "#5a5050"
-  )
+# # MAE
+# p <- p +
+#   geom_line(data = mae,
+#             aes(y = mae, group = 1),
+#             alpha = 1,
+#             size  = .5,
+#             color = "#5a5050"
+#   ) +
+#   
+#   geom_label(data = mae , 
+#              aes(y = mae, 
+#                  label = mae
+#              ),
+#              color = "#5a5050",
+#              # nudge_x = -0.5,
+#              label.size = 0,
+#              size = 3
+#   ) +
+#   
+#   # geom_point(data = mae, 
+#   #            aes(y = mae),
+#   #            size = 4,
+#   #            stroke = 0
+#   # ) +
+#   geom_label(data = mae %>% 
+#                filter(anyo == 2019), 
+#              aes(y = mae, 
+#                  label = "MAE"
+#                  ),
+#              nudge_x = -0.5,
+#              label.size = 0,
+#              size = 3,
+#              color = "#5a5050"
+#   ) +
+#   geom_label(data = mae %>%
+#                filter(anyo == 1977), 
+#              
+#              aes(y = mae, 
+#                  label = "MAE"
+#                  ),
+#              
+#              nudge_x = 0.5,
+#              label.size = 0,
+#              size = 3,
+#              color = "#5a5050"
+#   )
 
 
 # Escalas
@@ -260,3 +260,4 @@ p <- p +
 # EXPORTACIÓN -------------------------------------------------------------
 
 ggsave("ley_dhont/dataviz/diferencia_historica_0.svg", plot = p, dpi = 400, width = 20, height = 30, units = "cm")
+ggsave("ley_dhont/dataviz/diferencia_historica_0.png", plot = p, dpi = 400, width = 20, height = 30, units = "cm")

@@ -8,7 +8,7 @@
 # DEPENDENCIAS ------------------------------------------------------------
 
 library(tidyverse)
-source("ley_dhont/src/02-dataviz/tema_grafico.R")
+source("ley_dhont/src/02-dataviz/00_tema_grafico.R")
 
 # CARGA DE DATOS ----------------------------------------------------------
 
@@ -269,7 +269,7 @@ p <- p +
     x = "",
     y = "",
     title = "El PACMA pasaría de \nno tener ningún diputado a tener 4",
-    caption = "@papabloblog"
+    caption = "Fuente: Ministerio del Interior\n\n@papabloblog"
   ) +
   scale_x_discrete(
     labels = c("votos_porc" = "Diputados proporcionales\na los votos",
