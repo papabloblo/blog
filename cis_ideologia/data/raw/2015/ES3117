@@ -1,0 +1,813 @@
+DATA LIST FILE= 'DA3117'
+/ESTU 1-4 CUES 5-9 CCAA 10-11 PROV 12-13 MUN 14-16 TAMUNI 17 CAPITAL 18 DISTR 19-20 SECCION 21-23
+ENTREV 24-27 TIPO 28 P0A 29 P0B 30-31 P1 32 P2 33 P3 34 P4 35 P5 36 P6 37 P7 38 P801 39 P802 40
+P803 41 P804 42 P805 43 P806 44 P807 45 P808 46 P809 47 P810 48 P811 49 P812 50 P813 51 P814 52
+P901 53-54 P902 55-56 P903 57-58 P904 59-60 P905 61-62 P906 63-64 P907 65-66 P908 67-68 P909 69-70
+P910 71-72 P911 73-74 P912 75-76 P913 77-78 P914 79-80 P10 81 P10A 82 P10B01 83-84 P10B02 85-86
+P11 87-88 P12 89-90 P13 91-92 P14 93-94 P15 95 P16 96 P1701 97-98 P1702 99-100 P1703 101-102
+P1704 103-104 P1705 105-106 P1706 107-108 P1707 109-110 P1708 111-112 P1709 113-114 P1710 115-116
+P1711 117-118 P1712 119-120 P1713 121-122 P1714 123-124 P1715 125-126 P1716 127-128 P1717 129-130
+P18 131-132 P1901 133-134 P1902 135-136 P1903 137-138 P1904 139-140 P1905 141-142 P1906 143-144
+P1907 145-146 P1908 147-148 P1909 149-150 P1910 151-152 P1911 153-154 P1912 155-156 P1913 157-158
+P1914 159-160 P1915 161-162 P1916 163-164 P1917 165-166 P20 167 P20A 168-169 P21 170-171 P2201 172-173
+P2202 174-175 P2203 176-177 P2204 178-179 P2205 180-181 P2206 182-183 P2207 184-185 P2208 186-187
+P2209 188-189 P2210 190-191 P2211 192-193 P2212 194-195 P2213 196-197 P2214 198-199 P2215 200-201
+P2216 202-203 P2217 204-205 P23 206-207 P23A 208-209 P24 210 P25 211 P26 212 P26A 213-214 P27 215
+P28 216-217 P29 218 P29A 219-220 P30 221 P31 222 P32 223 P32A 224-225 P32B 226-227 P33 228 P34 229
+P35 230 P36 231 P36A 232 P37 233 P37A 234 P38 235 E101 236-237 E102 238-239 E103 240-241 E3 242-244
+E4 245 C1 246 C1A 247-248 P10BCOM 249-252 P11R 253-254 P12R 255-256 VOTOSIM 257-258 RECUERDO 259-260
+RVAUTON 261-262 ESTUDIOS 263 PESO 264-268(3) PESOCCAA 269-274(4) E2 275 .
+
+VARIABLE LABELS
+CCAA 'Comunidad autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de hábitat'
+/CAPITAL 'Capital'
+/TIPO 'Tipo cuestionario'
+/P0A 'Nacionalidad de la persona entrevistada'
+/P0B 'Nacionalidad de la persona entrevistada (extranjeros)'
+/P1 'Grado de interés por la política'
+/P2 'Frecuencia con la que se habla de política con diferentes personas del entorno social próximo'
+/P3 'Valoración de la situación política general de España'
+/P4 'Valoración de la situación económica general de España'
+/P5 'Valoración de la gestión del gobierno central del PP (4 años)'
+/P6 'Valoración de una posible gestión del gobierno central si gobernase el PSOE'
+/P7 'Valoración de la labor de oposición del PSOE al gobierno central del PP (4 años)'
+/P801 'El empleo'
+/P802 'La educación'
+/P803 'La sanidad'
+/P804 'La economía'
+/P805 'La Unión Europea'
+/P806 'La política social'
+/P807 'La seguridad ciudadana'
+/P808 'La vivienda'
+/P809 'La inmigración'
+/P810 'El Estado de las autonomías'
+/P811 'El medio ambiente'
+/P812 'La política exterior'
+/P813 'La igualdad entre hombres y mujeres'
+/P814 'Las infraestructuras'
+/P901 'El empleo'
+/P902 'La educación'
+/P903 'La sanidad'
+/P904 'La economía'
+/P905 'La Unión Europea'
+/P906 'La política social'
+/P907 'La seguridad ciudadana'
+/P908 'La vivienda'
+/P909 'La inmigración'
+/P910 'El Estado de las autonomías'
+/P911 'El medio ambiente'
+/P912 'La política exterior'
+/P913 'La igualdad entre hombres y mujeres'
+/P914 'Las infraestructuras'
+/P10 'Intención de ir a votar en las elecciones generales de 2015'
+/P10A 'Decisión de votar a un partido en las elecciones generales de 2015'
+/P10B01 'Partidos políticos entre los que se duda el voto en las elecciones generales de 2015 (2)'
+/P10B02 'Partidos políticos entre los que se duda el voto en las elecciones generales de 2015 (2)'
+/P11 'Intención de voto en las elecciones generales de 2015'
+/P12 'Partido político por el que se siente más simpatía en las elecciones generales de 2015 (sin filtro)'
+/P13 'Partido político que se cree va a ganar las elecciones generales de 2015'
+/P14 'Partido político que gustaría que fuera ganador en las elecciones generales de 2015'
+/P15 'Preferencia por el resultado de las elecciones generales de 2015'
+/P16 'Preferencia por el gobierno de un partido distinto al actual'
+/P1701 'Enrique Álvarez Sostres'
+/P1702 'Joan Baldoví Roda'
+/P1703 'Koldo Martínez'
+/P1704 'Alfred Bosch'
+/P1705 'Andrés Herzog'
+/P1706 'Josep A. Duran i Lleida'
+/P1707 'Aitor Esteban'
+/P1708 'Xabier Mikel Errekondo'
+/P1709 'María Olaia Fernández'
+/P1710 'Alberto Garzón'
+/P1711 'Pablo Iglesias'
+/P1712 'Pere Macías'
+/P1713 'Ana María Oramas'
+/P1714 'Mariano Rajoy'
+/P1715 'Albert Rivera'
+/P1716 'Carlos Salvador'
+/P1717 'Pedro Sánchez'
+/P18 'Escala de probabilidad (0-10) de votar en las elecciones generales de 2015'
+/P1901 'PP'
+/P1902 'PSOE'
+/P1903 'IU (ICV en Cataluña)'
+/P1904 'UPyD'
+/P1905 'Ciudadanos'
+/P1906 'Podemos'
+/P1907 'Convergència (Sólo en Cataluña)'
+/P1908 'ERC (Sólo en Cataluña)'
+/P1909 'Unió (Sólo en Cataluña)'
+/P1910 'PNV (Sólo en País Vasco)'
+/P1911 'EH Bildu (Sólo en País Vasco y Navarra)'
+/P1912 'BNG (Sólo en Galicia)'
+/P1913 'CC (Sólo en Canarias)'
+/P1914 'Compromís (Sólo en Comunidad Valenciana)'
+/P1915 'FAC (Sólo en Asturias)'
+/P1916 'Geroa Bai (Sólo en Navarra)'
+/P1917 'UPN (Sólo en Navarra)'
+/P20 'Participación electoral en las elecciones generales de 2011'
+/P20A 'Recuerdo de voto en las elecciones generales de 2011 de los votantes'
+/P21 'Escala de autoubicación ideológica (1-10)'
+/P2201 'PP'
+/P2202 'PSOE'
+/P2203 'IU (ICV en Cataluña)'
+/P2204 'UPyD'
+/P2205 'Ciudadanos'
+/P2206 'Podemos'
+/P2207 'Convergència (Sólo en Cataluña)'
+/P2208 'ERC (Sólo en Cataluña)'
+/P2209 'Unió (Sólo en Cataluña)'
+/P2210 'PNV (Sólo en País Vasco)'
+/P2211 'EH Bildu (Sólo en País Vasco y Navarra)'
+/P2212 'BNG (Sólo en Galicia)'
+/P2213 'CC (Sólo en Canarias)'
+/P2214 'Compromís (Sólo en Comunidad Valenciana)'
+/P2215 'FAC (Sólo en Asturias)'
+/P2216 'Geroa Bai (Sólo en Navarra)'
+/P2217 'UPN (Sólo en Navarra)'
+/P23 'Autodefinición de su ideología política'
+/P23A 'Autodefinición de su ideología política (2ª opción)'
+/P24 'Sentimiento nacionalista'
+/P25 'Preferencia entre diferentes alternativas de organización territorial del Estado en España'
+/P26 'Participación electoral en las elecciones autonómicas'
+/P26A 'Recuerdo de voto en las elecciones autonómicas'
+/P27 'Sexo de la persona entrevistada'
+/P28 'Edad de la persona entrevistada'
+/P29 'Escolarización de la persona entrevistada'
+/P29A 'Nivel de estudios alcanzado por la persona entrevistada'
+/P30 'Situación laboral de la persona entrevistada'
+/P31 'Momento de la adquisición de la nacionalidad española'
+/P32 'Lugar de nacimiento (país)'
+/P32A 'Lugar de nacimiento (comunidad autónoma)'
+/P32B 'Lugar de nacimiento de los nacidos fuera de España (país)'
+/P33 'Uso de Internet (últimos 3 meses)'
+/P34 'Tenencia de teléfono fijo en el hogar'
+/P35 'Tenencia de teléfono móvil'
+/P36 'Número de teléfono'
+/P36A 'No desea realizar ninguna otra entrevista'
+/P37 'Presencia de terceras personas'
+/P37A 'Intervención activamente de terceras personas'
+/P38 'Uso de las tarjetas'
+/E101 'Fecha de realización (día)'
+/E102 'Fecha de realización (mes)'
+/E103 'Fecha de realización (año)'
+/E3 'Duración de la entrevista (en minutos)'
+/E4 'Hora de realización'
+/C1 'Resultado de la inspección'
+/C1A 'Motivo de la entrevista incorrecta'
+/P10BCOM 'Partidos políticos entre los que se duda el voto en las elecciones generales de 2015 (2)'
+/P11R 'Intención de voto en las elecciones generales de 2015 [recodificada]'
+/P12R 'Partido político por el que se siente más simpatía en las elecciones generales de 2015 (sin filtro) [recodificada]'
+/VOTOSIM 'Voto+simpatía en las elecciones generales de 2015 [recodificada]'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de 2011 [recodificada]'
+/RVAUTON 'Recuerdo de voto en las elecciones autonómicas de 2015 [recodificada]'
+/ESTUDIOS 'Estudios de la persona entrevistada [recodificada]'
+/PESO 'Ponderación Nacional'
+/PESOCCAA 'Ponderación Autonómica'
+/E2 'Día de la semana que se realiza la entrevista'
+.
+
+VALUE LABELS
+ESTU
+/CUES
+/CCAA
+1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias' 6 'Cantabria'
+7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana' 11 'Extremadura'
+12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad autónoma de)' 19 'Melilla (Ciudad autónoma de)'
+/PROV
+1 'Araba-Álava' 2 'Albacete' 3 'Alacant/Alicante' 4 'Almería' 33 'Asturias' 5 'Ávila' 6 'Badajoz'
+7 'Illes Balears' 8 'Barcelona' 9 'Burgos' 10 'Cáceres' 11 'Cádiz' 39 'Cantabria' 12 'Castelló/Castellón'
+13 'Ciudad Real' 14 'Córdoba' 15 'Coruña (A)' 16 'Cuenca' 17 'Girona' 18 'Granada' 19 'Guadalajara'
+20 'Gipuzkoa' 21 'Huelva' 22 'Huesca' 23 'Jaén' 24 'León' 25 'Lleida' 27 'Lugo' 28 'Madrid'
+29 'Málaga' 30 'Murcia' 31 'Navarra' 32 'Ourense' 34 'Palencia' 35 'Palmas (Las)' 36 'Pontevedra'
+26 'Rioja (La)' 37 'Salamanca' 38 'Santa Cruz de Tenerife' 40 'Segovia' 41 'Sevilla' 42 'Soria'
+43 'Tarragona' 44 'Teruel' 45 'Toledo' 46 'València/Valencia' 47 'Valladolid' 48 'Bizkaia' 49 'Zamora'
+50 'Zaragoza' 51 'Ceuta' 52 'Melilla'
+/MUN
+0 'Mun.<100.000 hab. no capitales de provincia' 1 'Ceuta / Melilla' 3 'Albacete' 4 'Algeciras'
+5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón' 12 'Cádiz' 13 'Almería / Barakaldo' 14 'Alicante/Alacant'
+15 'Badalona / Badajoz' 16 'Cartagena / Palmas de Gran Canaria (Las)' 19 'Ávila / Barcelona'
+20 'Bilbao / Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón' 26 'Telde' 28 'Lugo'
+30 'Coruña (A) / Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra / Santa Cruz de Tenerife / Dos Hermanas'
+40 'Castellón de la Plana/Castelló de la Plana / Palma de Mallorca' 41 'Huelva' 44 'Oviedo'
+50 'Jaén' 54 'Ourense' 57 'Vigo' 58 'Fuenlabrada' 59 'Burgos / Vitoria-Gasteiz' 65 'Elche/Elx / Getafe'
+67 'Málaga' 69 'Donostia/San Sebastián / Marbella' 74 'Leganés' 75 'Santander' 78 'Cuenca' 79 'Girona / Madrid'
+87 'Granada' 89 'León / Logroño' 91 'Sevilla' 92 'Móstoles' 101 'Hospitalet de Llobregat' 106 'Parla'
+120 'Lleida / Palencia' 121 'Mataró' 123 'Reus' 125 'Huesca' 130 'Guadalajara' 133 'Torrevieja'
+148 'Tarragona / Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid' 187 'Sabadell'
+194 'Segovia' 201 'Pamplona/Iruña' 216 'Teruel' 245 'Santa Coloma de Gramanet' 250 'Valencia'
+274 'Salamanca' 275 'Zamora' 279 'Terrassa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 2.000 habitantes' 2 '2.001 a 10.000 habitantes' 3 '10.001 a 50.000 habitantes'
+4 '50.001 a 100.000 habitantes' 5 '100.001 a 400.000 habitantes' 6 '400.001 a 1.000.000 habitantes'
+7 'Más de 1.000.000 habitantes'
+/CAPITAL
+1 'Capital de CC.AA.' 2 'Capital de provincia' 3 'Otros municipios'
+/DISTR
+0 'Anonimizado'
+/SECCION
+0 'Anonimizado'
+/ENTREV
+0 'Anonimizado'
+/TIPO
+1 'Tipo panel' 2 'Tipo no panel'
+/P0A
+1 'Sólo la nacionalidad española' 2 'La nacionalidad española y otra' 3 'Sólo otra nacionalidad'
+9 'N.C.'
+/P0B
+0 'N.P.' 1 'Alemana' 2 'Argentina' 3 'Boliviana' 4 'Brasileña' 5 'Búlgara' 6 'Colombiana' 7 'Cubana'
+8 'Dominicana' 9 'Ecuatoriana' 10 'Francesa' 11 'Italiana' 12 'Marroquí' 13 'Peruana' 14 'Portuguesa'
+15 'Reino Unido/Británica' 16 'Rumana' 17 'Uruguaya' 18 'Venezolana' 19 'Otra' 99 'N.C.'
+/P1
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 9 'N.C.'
+/P2
+1 'Habitualmente' 2 'De vez en cuando' 3 'Rara vez' 4 'Nunca o casi nunca' 9 'N.C.'
+/P3
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P4
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P5
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P6
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P7
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P801
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P802
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P803
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P804
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P805
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P806
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P807
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P808
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P809
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P810
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P811
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P812
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P813
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P814
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P901
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P902
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P903
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P904
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P905
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P906
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P907
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P908
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P909
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P910
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P911
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P912
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P913
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P914
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla'
+31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P10
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.'
+/P10A
+0 'N.P.' 1 'Sí, lo tiene decidido' 2 'No, no lo ha decidido aún' 9 'N.C.'
+/P10B01
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC'
+9 'ICV' 10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova'
+18 'CC' 19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI' 26 'PRC (Partido Regionalista de Cantabria)' 27 'UPL (Unión del Pueblo Leonés)'
+28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)'
+90 'Otro' 95 'Voto nulo' 96 'Voto en blanco' 97 'Abstenerse' 98 'N.S.' 99 'N.C.'
+/P10B02
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC'
+9 'ICV' 10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova'
+18 'CC' 19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI' 26 'PRC (Partido Regionalista de Cantabria)' 27 'UPL (Unión del Pueblo Leonés)'
+28 'Caballas' 29 'MDyC (Movim. Dignidad y Ciudadanía)' 30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)'
+90 'Otro' 95 'Voto nulo' 96 'Voto en blanco' 97 'Abstenerse' 98 'N.S.' 99 'N.C.'
+/P11
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)' 32 'Junts pel Sí' 33 'Catalunya Sí que es Pot'
+34 'VOX' 35 'PACMA' 36 'Los Verdes' 37 'Partidos X' 38 'Partido Pirata' 39 'Escaños en Blanco'
+41 'España 2000' 42 'Ahora en Común' 43 '(En Cataluña) En Comú Podem/Podem en Comú' 44 'Unidad Popular'
+45 '(En Galicia) En Marea' 46 'Partido Cannabis' 47 'EQUO' 48 'Falange Española' 49 'Democracia Nacional'
+50 'SAIn (Partido Solidaridad y Autogestión Internacionalista)' 51 'Alternativa Española' 90 'Otro'
+95 'Voto nulo' 96 'En blanco' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/P12
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)' 32 'Junts pel Sí' 33 'Catalunya Sí que es Pot'
+34 'VOX' 35 'PACMA' 36 'Los Verdes' 37 'Partidos X' 38 'Partido Pirata' 39 'Escaños en Blanco'
+41 'España 2000' 42 'Ahora en Común' 43 '(En Cataluña) En Comú Podem/Podem en Comú' 44 'Unidad Popular'
+45 '(En Galicia) En Marea' 46 'Partido Cannabis' 47 'EQUO' 48 'Falange Española' 49 'Democracia Nacional'
+50 'SAIn (Partido Solidaridad y Autogestión Internacionalista)' 51 'Alternativa Española' 90 'Otro'
+97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P13
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.'
+99 'N.C.'
+/P14
+1 'PP' 2 'PSOE' 3 'IU' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (CDC)' 8 'ERC' 9 'ICV'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova' 18 'CC'
+19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)' 90 'Otro' 97 'Ninguno' 98 'N.S.'
+99 'N.C.'
+/P15
+1 'Con mayoría absoluta' 2 'Sin mayoría absoluta' 8 'N.S.' 9 'N.C.'
+/P16
+1 'Sí' 2 'No' 3 '(NO LEER) Le es indiferente' 8 'N.S.' 9 'N.C.'
+/P1701
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1702
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1703
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1704
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1705
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1706
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1707
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1708
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1709
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1710
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1711
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1712
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1713
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1714
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1715
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1716
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1717
+0 '0 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P18
+0 '0 Con toda seguridad, no iré a votar' 10 '10 Con toda seguridad, iré a votar' 98 'N.S.' 99 'N.C.'
+/P1901
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1902
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1903
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1904
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1905
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1906
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1907
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1908
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1909
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1910
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1911
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1912
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1913
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1914
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1915
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1916
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1917
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P20
+1 'Fue a votar y votó' 2 'No tenía edad para votar' 3 'Fue a votar pero no pudo hacerlo' 4 'No fue a votar porque no pudo'
+5 'Prefirió no votar' 8 'No recuerda' 9 'N.C.'
+/P20A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'IU (ICV en Cataluña)' 4 'UPyD' 5 'CiU' 6 'Amaiur' 7 'PNV' 8 'ERC'
+9 'BNG' 10 'CC-NC' 11 'Compromís-Equo' 12 'FAC' 13 'Geroa Bai' 14 'Otros partidos' 15 'En blanco'
+77 'Voto nulo' 98 'No recuerda' 99 'N.C.'
+/P21
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2201
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2202
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2203
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2204
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2205
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2206
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2207
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2208
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2209
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2210
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2211
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2212
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2213
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2214
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2215
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2216
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P2217
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P23
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas'
+97 'Apolítico/a' 98 'N.S.' 99 'N.C.'
+/P23A
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas'
+97 'Apolítico/a' 98 'N.S.' 99 'N.C.'
+/P24
+1 'Se siente únicamente español/a' 2 'Se siente más español/a que (gentilicio C.A.)' 3 'Se siente tan español/a como (gentilicio C.A.)'
+4 'Se siente más (gentilicio C.A.) que español/a' 5 'Se siente únicamente (gentilicio C.A.)'
+7 '(NO LEER) Ninguna de las anteriores' 8 'N.S.' 9 'N.C.'
+/P25
+1 'Un Estado con un único Gobierno central sin autonomías' 2 'Un Estado en el que las comunidades autónomas tengan menor autonomía que en la actualidad'
+3 'Un Estado con comunidades autónomas como en la actualidad' 4 'Un Estado en el que las comunidades autónomas tengan mayor autonomía que en la actualidad'
+5 'Un Estado en el que se reconociese a las comunidades autónomas la posibilidad de convertirse en estados independientes'
+8 'N.S.' 9 'N.C.'
+/P26
+1 'Fue a votar y votó' 2 'No tenía edad para votar' 3 'Fue a votar pero no pudo hacerlo' 4 'No fue a votar porque no pudo'
+5 'Prefirió no votar' 8 'No recuerda' 9 'N.C.'
+/P26A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'UPyD' 32 'Junts pel Sí' 7 'Convergència (CDC)'
+8 'ERC' 33 'Catalunya Sí que es Pot' 9 'ICV' 10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai'
+15 'UPN' 16 'BNG' 17 'Anova (Alternativa Galega de Esquerdas)' 18 'CC' 19 'Nueva Canarias' 20 'Compromís'
+21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)' 23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)'
+26 'PRC (Partido Regionalista de Cantabria)' 27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas'
+29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)' 30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)'
+90 'Otro' 95 'Voto nulo' 96 'En blanco' 98 'No recuerda' 99 'N.C.'
+/P27
+1 'Hombre' 2 'Mujer'
+/P28
+99 'N.C.'
+/P29
+1 'No, es analfabeto/a' 2 'No, pero sabe leer y escribir' 3 'Sí, ha ido a la escuela' 9 'N.C.'
+/P29A
+0 'N.P.' 1 'Menos de cinco años de escolarización' 2 'Primaria (enseñanza primaria o hasta 5º de EGB)'
+3 'Formación Profesional inicial' 4 'Secundaria (Bachillerato Elemental, EGB completa, ESO completa)'
+5 'Formación Profesional de grado medio (FP I)' 6 'Bachillerato/COU/PREU (Bachillerato Superior, BUP, Bachillerato)'
+7 'Formación Profesional de grado superior (FP II)' 8 'Universitarios Medios (Diplomatura, Arquitectura o Ingeniería técnica)'
+9 'Universitarios Superiores (Licenciatura, Grado, Máster Oficial, Doctorado)' 10 'Otros estudios no reglados'
+99 'N.C.'
+/P30
+1 'Trabaja' 2 'Jubilado/a o pensionista (anteriormente ha trabajado)' 3 'Pensionista (anteriormente no ha trabajado)'
+4 'En paro y ha trabajado antes' 5 'En paro y busca su primer empleo' 6 'Estudiante' 7 'Trabajo doméstico no remunerado'
+8 'Otra situación' 9 'N.C.'
+/P31
+1 'Desde que nació' 2 'La ha adquirido con posterioridad' 9 'N.C.'
+/P32
+1 'En España' 2 'En otro país' 9 'N.C.'
+/P32A
+0 'N.P.' 1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias'
+6 'Cantabria' 7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana'
+11 'Extremadura' 12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad autónoma de)' 19 'Melilla (Ciudad autónoma de)'
+99 'N.C.'
+/P32B
+0 'N.P.' 1 'Alemania' 2 'Argentina' 3 'Bolivia' 4 'Brasil' 5 'Bulgaria' 6 'Colombia' 7 'Cuba'
+8 'Dominicana (República)' 9 'Ecuador' 10 'Francia' 11 'Italia' 12 'Marruecos' 13 'Perú' 14 'Portugal'
+15 'Reino Unido' 16 'Rumanía' 17 'Uruguay' 18 'Venezuela' 19 'Otro' 99 'N.C.'
+/P33
+1 'Sí' 2 'No' 9 'N.C.'
+/P34
+1 'Sí' 2 'No' 9 'N.C.'
+/P35
+1 'Sí, una línea' 2 'Sí, más de una línea' 3 'No' 9 'N.C.'
+/P36
+1 'Da solo número fijo' 2 'Da solo número móvil' 3 'Da número fijo y móvil' 4 'No da ni fijo ni móvil'
+9 'N.C.'
+/P36A
+1 'Sí' 9 'No expresa rechazo a realizar otra entrevista'
+/P37
+1 'Sí' 2 'No' 9 'No consta'
+/P37A
+0 'N.P.' 1 'Sí' 2 'No' 9 'No consta'
+/P38
+1 'La persona entrevistada las ha usado todas' 2 'Sólo ha usado algunas' 3 'Las he leído yo'
+9 'No consta'
+/E101
+/E102
+10 'Octubre' 11 'Noviembre'
+/E103
+15 '2015'
+/E3
+/E4
+1 'Entre las 9-12 horas' 2 'Entre las 12''05 y las 14 horas' 3 'Entre las 14''05 y las 16 horas'
+4 'Entre las 16''05 y las 18 horas' 5 'Entre las 18''05 y las 21 horas' 6 'Después de las 21 horas'
+9 'N.C.'
+/C1
+1 'Entrevista correcta' 2 'Entrevista incorrecta' 3 'No se ha establecido contacto' 4 'No inspeccionada'
+/C1A
+0 'N.P.'
+/P10BCOM
+0 'N.P.' 102 'PP/PSOE' 103 'PP/IU' 104 'PP/UPyD' 105 'PP/Ciudadanos' 106 'PP/Podemos' 107 'PP/Convergència'
+108 'PP/ERC' 109 'PP/ICV' 110 'PP/Unió' 111 'PP/CUP' 112 'PP/PNV' 113 'PP/EH Bildu' 114 'PP/Geroa Bai'
+115 'PP/UPN' 116 'PP/BNG' 117 'PP/Anova' 118 'PP/CC' 119 'PP/Nueva Canarias' 120 'PP/Compromís'
+121 'PP/FAC' 122 'PP/PAR' 123 'PP/CHA' 124 'PP/PSM-Entesa/MES' 125 'PP/PI' 126 'PP/PRC' 127 'PP/UPL'
+128 'PP/Caballas' 129 'PP/MDyC' 130 'PP/Coalición por Melilla' 131 'PP/PPL' 190 'PP/Otros' 195 'PP/Voto nulo'
+196 'PP/En blanco' 197 'PP/Abstención' 203 'PSOE/IU' 204 'PSOE/UPyD' 205 'PSOE/Ciudadanos' 206 'PSOE/Podemos'
+207 'PSOE/Convergència' 208 'PSOE/ERC' 209 'PSOE/ICV' 210 'PSOE/Unió' 211 'PSOE/CUP' 212 'PSOE/PNV'
+213 'PSOE/EH Bildu' 214 'PSOE/Geroa Bai' 215 'PSOE/UPN' 216 'PSOE/BNG' 217 'PSOE/Anova' 218 'PSOE/CC'
+219 'PSOE/Nueva Canarias' 220 'PSOE/Compromís' 221 'PSOE/FAC' 222 'PSOE/PAR' 223 'PSOE/CHA'
+224 'PSOE/PSM-Entesa/MES' 225 'PSOE/PI' 226 'PSOE/PRC' 227 'PSOE/UPL' 228 'PSOE/Caballas' 229 'PSOE/MDyC'
+230 'PSOE/Coalición por Melilla' 231 'PSOE/PPL' 290 'PSOE/Otros' 295 'PSOE/Voto nulo' 296 'PSOE/En blanco'
+297 'PSOE/Abstención' 304 'IU/UPyD' 305 'IU/Ciudadanos' 306 'IU/Podemos' 307 'IU/Convergència'
+308 'IU/ERC' 309 'IU/ICV' 310 'IU/Unió' 311 'IU/CUP' 312 'IU/PNV' 313 'IU/EH Bildu' 314 'IU/Geroa Bai'
+315 'IU/UPN' 316 'IU/BNG' 317 'IU/Anova' 318 'IU/CC' 319 'IU/Nueva Canarias' 320 'IU/Compromís'
+321 'IU/FAC' 322 'IU/PAR' 323 'IU/CHA' 324 'IU/PSM-Entesa/MES' 325 'IU/PI' 326 'IU/PRC' 327 'IU/UPL'
+328 'IU/Caballas' 329 'IU/MDyC' 330 'IU/Coalición por Melilla' 331 'IU/PPL' 390 'IU/Otros' 395 'IU/Voto nulo'
+396 'IU/En blanco' 397 'IU/Abstención' 405 'UPyD/Ciudadanos' 406 'UPyD/Podemos' 407 'UPyD/Convergència'
+408 'UPyD/ERC' 409 'UPyD/ICV' 410 'UPyD/Unió' 411 'UPyD/CUP' 412 'UPyD/PNV' 413 'UPyD/EH Bildu'
+414 'UPyD/Geroa Bai' 415 'UPyD/UPN' 416 'UPyD/BNG' 417 'UPyD/Anova' 418 'UPyD/CC' 419 'UPyD/Nueva Canarias'
+420 'UPyD/Compromís' 421 'UPyD/FAC' 422 'UPyD/PAR' 423 'UPyD/CHA' 424 'UPyD/PSM-Entesa/MES'
+425 'UPyD/PI' 426 'UPyD/PRC' 427 'UPyD/UPL' 428 'UPyD/Caballas' 429 'UPyD/MDyC' 430 'UPyD/Coalición por Melilla'
+431 'UPyD/PPL' 490 'UPyD/Otros' 495 'UPyD/Voto nulo' 496 'UPyD/En blanco' 497 'UPyD/Abstención'
+506 'Ciudadanos/Podemos' 507 'Ciudadanos/Convergència' 508 'Ciudadanos/ERC' 509 'Ciudadanos/ICV'
+510 'Ciudadanos/Unió' 511 'Ciudadanos/CUP' 512 'Ciudadanos/PNV' 513 'Ciudadanos/EH Bildu' 514 'Ciudadanos/Geroa Bai'
+515 'Ciudadanos/UPN' 516 'Ciudadanos/BNG' 517 'Ciudadanos/Anova' 518 'Ciudadanos/CC' 519 'Ciudadanos/Nueva Canarias'
+520 'Ciudadanos/Compromís' 521 'Ciudadanos/FAC' 522 'Ciudadanos/PAR' 523 'Ciudadanos/CHA' 524 'Ciudadanos/PSM-Entesa/MES'
+525 'Ciudadanos/PI' 526 'Ciudadanos/PRC' 527 'Ciudadanos/UPL' 528 'Ciudadanos/Caballas' 529 'Ciudadanos/MDyC'
+530 'Ciudadanos/Coalición por Melilla' 531 'Ciudadanos/PPL' 590 'Ciudadanos/Otros' 595 'Ciudadanos/Voto nulo'
+596 'Ciudadanos/En blanco' 597 'Ciudadanos/Abstención' 607 'Podemos/Convergència' 608 'Podemos/ERC'
+609 'Podemos/ICV' 610 'Podemos/Unió' 611 'Podemos/CUP' 612 'Podemos/PNV' 613 'Podemos/EH Bildu'
+614 'Podemos/Geroa Bai' 615 'Podemos/UPN' 616 'Podemos/BNG' 617 'Podemos/Anova' 618 'Podemos/CC'
+619 'Podemos/Nueva Canarias' 620 'Podemos/Compromís' 621 'Podemos/FAC' 622 'Podemos/PAR' 623 'Podemos/CHA'
+624 'Podemos/PSM-Entesa/MES' 625 'Podemos/PI' 626 'Podemos/PRC' 627 'Podemos/UPL' 628 'Podemos/Caballas'
+629 'Podemos/MDyC' 630 'Podemos/Coalición por Melilla' 631 'Podemos/PPL' 690 'Podemos/Otros'
+695 'Podemos/Voto nulo' 696 'Podemos/En blanco' 697 'Podemos/Abstención' 708 'Convergència/ERC'
+709 'Convergència/ICV' 710 'Convergència/Unió' 711 'Convergència/CUP' 712 'Convergència/PNV'
+713 'Convergència/EH Bildu' 714 'Convergència/Geroa Bai' 715 'Convergència/UPN' 716 'Convergència/BNG'
+717 'Convergència/Anova' 718 'Convergència/CC' 719 'Convergència/Nueva Canarias' 720 'Convergència/Compromís'
+721 'Convergència/FAC' 722 'Convergència/PAR' 723 'Convergència/CHA' 724 'Convergència/PSM-Entesa/MES'
+725 'Convergència/PI' 726 'Convergència/PRC' 727 'Convergència/UPL' 728 'Convergència/Caballas'
+729 'Convergència/MDyC' 730 'Convergència/Coalición por Melilla' 731 'Convergència/PPL' 790 'Convergència/Otros'
+795 'Convergència/Voto nulo' 796 'Convergència/En blanco' 797 'Convergència/Abstención' 809 'ERC/ICV'
+810 'ERC/Unió' 811 'ERC/CUP' 812 'ERC/PNV' 813 'ERC/EH Bildu' 814 'ERC/Geroa Bai' 815 'ERC/UPN'
+816 'ERC/BNG' 817 'ERC/Anova' 818 'ERC/CC' 819 'ERC/Nueva Canarias' 820 'ERC/Compromís' 821 'ERC/FAC'
+822 'ERC/PAR' 823 'ERC/CHA' 824 'ERC/PSM-Entesa/MES' 825 'ERC/PI' 826 'ERC/PRC' 827 'ERC/UPL'
+828 'ERC/Caballas' 829 'ERC/MDyC' 830 'ERC/Coalición por Melilla' 831 'ERC/PPL' 890 'ERC/Otros'
+895 'ERC/Voto nulo' 896 'ERC/En blanco' 897 'ERC/Abstención' 910 'ICV/Unió' 911 'ICV/CUP' 912 'ICV/PNV'
+913 'ICV/EH Bildu' 914 'ICV/Geroa Bai' 915 'ICV/UPN' 916 'ICV/BNG' 917 'ICV/Anova' 918 'ICV/CC'
+919 'ICV/Nueva Canarias' 920 'ICV/Compromís' 921 'ICV/FAC' 922 'ICV/PAR' 923 'ICV/CHA' 924 'ICV/PSM-Entesa/MES'
+925 'ICV/PI' 926 'ICV/PRC' 927 'ICV/UPL' 928 'ICV/Caballas' 929 'ICV/MDyC' 930 'ICV/Coalición por Melilla'
+931 'ICV/PPL' 990 'ICV/Otros' 995 'ICV/Voto nulo' 996 'ICV/En blanco' 997 'ICV/Abstención' 1011 'Unió/CUP'
+1012 'Unió/PNV' 1013 'Unió/EH Bildu' 1014 'Unió/Geroa Bai' 1015 'Unió/UPN' 1016 'Unió/BNG' 1017 'Unió/Anova'
+1018 'Unió/CC' 1019 'Unió/Nueva Canarias' 1020 'Unió/Compromís' 1021 'Unió/FAC' 1022 'Unió/PAR'
+1023 'Unió/CHA' 1024 'Unió/PSM-Entesa/MES' 1025 'Unió/PI' 1026 'Unió/PRC' 1027 'Unió/UPL' 1028 'Unió/Caballas'
+1029 'Unió/MDyC' 1030 'Unió/Coalición por Melilla' 1031 'Unió/PPL' 1090 'Unió/Otros' 1095 'Unió/Voto nulo'
+1096 'Unió/En blanco' 1097 'Unió/Abstención' 1112 'CUP/PNV' 1113 'CUP/EH Bildu' 1114 'CUP/Geroa Bai'
+1115 'CUP/UPN' 1116 'CUP/BNG' 1117 'CUP/Anova' 1118 'CUP/CC' 1119 'CUP/Nueva Canarias' 1120 'CUP/Compromís'
+1121 'CUP/FAC' 1122 'CUP/PAR' 1123 'CUP/CHA' 1124 'CUP/PSM-Entesa/MES' 1125 'CUP/PI' 1126 'CUP/PRC'
+1127 'CUP/UPL' 1128 'CUP/Caballas' 1129 'CUP/MDyC' 1130 'CUP/Coalición por Melilla' 1131 'CUP/PPL'
+1190 'CUP/Otros' 1195 'CUP/Voto nulo' 1196 'CUP/En blanco' 1197 'CUP/Abstención' 1213 'PNV/EH Bildu'
+1214 'PNV/Geroa Bai' 1215 'PNV/UPN' 1216 'PNV/BNG' 1217 'PNV/Anova' 1218 'PNV/CC' 1219 'PNV/Nueva Canarias'
+1220 'PNV/Compromís' 1221 'PNV/FAC' 1222 'PNV/PAR' 1223 'PNV/CHA' 1224 'PNV/PSM-Entesa/MES'
+1225 'PNV/PI' 1226 'PNV/PRC' 1227 'PNV/UPL' 1228 'PNV/Caballas' 1229 'PNV/MDyC' 1230 'PNV/Coalición por Melilla'
+1231 'PNV/PPL' 1290 'PNV/Otros' 1295 'PNV/Voto nulo' 1296 'PNV/En blanco' 1297 'PNV/Abstención'
+1314 'EH Bildu/Geroa Bai' 1315 'EH Bildu/UPN' 1316 'EH Bildu/BNG' 1317 'EH Bildu/Anova' 1318 'EH Bildu/CC'
+1319 'EH Bildu/Nueva Canarias' 1320 'EH Bildu/Compromís' 1321 'EH Bildu/FAC' 1322 'EH Bildu/PAR'
+1323 'EH Bildu/CHA' 1324 'EH Bildu/PSM-Entesa/MES' 1325 'EH Bildu/PI' 1326 'EH Bildu/PRC' 1327 'EH Bildu/UPL'
+1328 'EH Bildu/Caballas' 1329 'EH Bildu/MDyC' 1330 'EH Bildu/Coalición por Melilla' 1331 'EH Bildu/PPL'
+1390 'EH Bildu/Otros' 1395 'EH Bildu/Voto nulo' 1396 'EH Bildu/En blanco' 1397 'EH Bildu/Abstención'
+1415 'Geroa Bai/UPN' 1416 'Geroa Bai/BNG' 1417 'Geroa Bai/Anova' 1418 'Geroa Bai/CC' 1419 'Geroa Bai/Nueva Canarias'
+1420 'Geroa Bai/Compromís' 1421 'Geroa Bai/FAC' 1422 'Geroa Bai/PAR' 1423 'Geroa Bai/CHA' 1424 'Geroa Bai/PSM-Entesa/MES'
+1425 'Geroa Bai/PI' 1426 'Geroa Bai/PRC' 1427 'Geroa Bai/UPL' 1428 'Geroa Bai/Caballas' 1429 'Geroa Bai/MDyC'
+1430 'Geroa Bai/Coalición por Melilla' 1431 'Geroa Bai/PPL' 1490 'Geroa Bai/Otros' 1495 'Geroa Bai/Voto nulo'
+1496 'Geroa Bai/En blanco' 1497 'Geroa Bai/Abstención' 1516 'UPN/BNG' 1517 'UPN/Anova' 1518 'UPN/CC'
+1519 'UPN/Nueva Canarias' 1520 'UPN/Compromís' 1521 'UPN/FAC' 1522 'UPN/PAR' 1523 'UPN/CHA'
+1524 'UPN/PSM-Entesa/MES' 1525 'UPN/PI' 1526 'UPN/PRC' 1527 'UPN/UPL' 1528 'UPN/Caballas' 1529 'UPN/MDyC'
+1530 'UPN/Coalición por Melilla' 1531 'UPN/PPL' 1590 'UPN/Otros' 1595 'UPN/Voto nulo' 1596 'UPN/En blanco'
+1597 'UPN/Abstención' 1617 'BNG/Anova' 1618 'BNG/CC' 1619 'BNG/Nueva Canarias' 1620 'BNG/Compromís'
+1621 'BNG/FAC' 1622 'BNG/PAR' 1623 'BNG/CHA' 1624 'BNG/PSM-Entesa/MES' 1625 'BNG/PI' 1626 'BNG/PRC'
+1627 'BNG/UPL' 1628 'BNG/Caballas' 1629 'BNG/MDyC' 1630 'BNG/Coalición por Melilla' 1631 'BNG/PPL'
+1690 'BNG/Otros' 1695 'BNG/Voto nulo' 1696 'BNG/En blanco' 1697 'BNG/Abstención' 1718 'Anova/CC'
+1719 'Anova/Nueva Canarias' 1720 'Anova/Compromís' 1721 'Anova/FAC' 1722 'Anova/PAR' 1723 'Anova/CHA'
+1724 'Anova/PSM-Entesa/MES' 1725 'Anova/PI' 1726 'Anova/PRC' 1727 'Anova/UPL' 1728 'Anova/Caballas'
+1729 'Anova/MDyC' 1730 'Anova/Coalición por Melilla' 1731 'Anova/PPL' 1790 'Anova/Otros' 1795 'Anova/Voto nulo'
+1796 'Anova/En blanco' 1797 'Anova/Abstención' 1819 'CC/Nueva Canarias' 1820 'CC/Compromís'
+1821 'CC/FAC' 1822 'CC/PAR' 1823 'CC/CHA' 1824 'CC/PSM-Entesa/MES' 1825 'CC/PI' 1826 'CC/PRC'
+1827 'CC/UPL' 1828 'CC/Caballas' 1829 'CC/MDyC' 1830 'CC/Coalición por Melilla' 1831 'CC/PPL'
+1890 'CC/Otros' 1895 'CC/Voto nulo' 1896 'CC/En blanco' 1897 'CC/Abstención' 1920 'Nueva Canarias/Compromís'
+1921 'Nueva Canarias/FAC' 1922 'Nueva Canarias/PAR' 1923 'Nueva Canarias/CHA' 1924 'Nueva Canarias/PSM-Entesa/MES'
+1925 'Nueva Canarias/PI' 1926 'Nueva Canarias/PRC' 1927 'Nueva Canarias/UPL' 1928 'Nueva Canarias/Caballas'
+1929 'Nueva Canarias/MDyC' 1930 'Nueva Canarias/Coalición por Melilla' 1931 'Nueva Canarias/PPL'
+1990 'Nueva Canarias/Otros' 1995 'Nueva Canarias/Voto nulo' 1996 'Nueva Canarias/En blanco'
+1997 'Nueva Canarias/Abstención' 2021 'Compromís/FAC' 2022 'Compromís/PAR' 2023 'Compromís/CHA'
+2024 'Compromís/PSM-Entesa/MES' 2025 'Compromís/PI' 2026 'Compromís/PRC' 2027 'Compromís/UPL'
+2028 'Compromís/Caballas' 2029 'Compromís/MDyC' 2030 'Compromís/Coalición por Melilla' 2031 'Compromís/PPL'
+2090 'Compromís/Otros' 2095 'Compromís/Voto nulo' 2096 'Compromís/En blanco' 2097 'Compromís/Abstención'
+2122 'FAC/PAR' 2123 'FAC/CHA' 2124 'FAC/PSM-Entesa/MES' 2125 'FAC/PI' 2126 'FAC/PRC' 2127 'FAC/UPL'
+2128 'FAC/Caballas' 2129 'FAC/MDyC' 2130 'FAC/Coalición por Melilla' 2131 'FAC/PPL' 2190 'FAC/Otros'
+2195 'FAC/Voto nulo' 2196 'FAC/En blanco' 2197 'FAC/Abstención' 2223 'PAR/CHA' 2224 'PAR/PSM-Entesa/MES'
+2225 'PAR/PI' 2226 'PAR/PRC' 2227 'PAR/UPL' 2228 'PAR/Caballas' 2229 'PAR/MDyC' 2230 'PAR/Coalición por Melilla'
+2231 'PAR/PPL' 2290 'PAR/Otros' 2295 'PAR/Voto nulo' 2296 'PAR/En blanco' 2297 'PAR/Abstención'
+2324 'CHA/PSM-Entesa/MES' 2325 'CHA/PI' 2326 'CHA/PRC' 2327 'CHA/UPL' 2328 'CHA/Caballas' 2329 'CHA/MDyC'
+2330 'CHA/Coalición por Melilla' 2331 'CHA/PPL' 2390 'CHA/Otros' 2395 'CHA/Voto nulo' 2396 'CHA/En blanco'
+2397 'CHA/Abstención' 2425 'PSM-Entesa/MES/PI' 2426 'PSM-Entesa/MES/PRC' 2427 'PSM-Entesa/MES/UPL'
+2428 'PSM-Entesa/MES/Caballas' 2429 'PSM-Entesa/MES/MDyC' 2430 'PSM-Entesa/MES/Coalición por Melilla'
+2431 'PSM-Entesa/MES/PPL' 2490 'PSM-Entesa/MES/Otros' 2495 'PSM-Entesa/MES/Voto nulo' 2496 'PSM-Entesa/MES/En blanco'
+2497 'PSM-Entesa/MES/Abstención' 2526 'PI/PRC' 2527 'PI/UPL' 2528 'PI/Caballas' 2529 'PI/MDyC'
+2530 'PI/Coalición por Melilla' 2531 'PI/PPL' 2590 'PI/Otros' 2595 'PI/Voto nulo' 2596 'PI/En blanco'
+2597 'PI/Abstención' 2627 'PRC/UPL' 2628 'PRC/Caballas' 2629 'PRC/MDyC' 2630 'PRC/Coalición por Melilla'
+2631 'PRC/PPL' 2690 'PRC/Otros' 2695 'PRC/Voto nulo' 2696 'PRC/En blanco' 2697 'PRC/Abstención'
+2728 'UPL/Caballas' 2729 'UPL/MDyC' 2730 'UPL/Coalición por Melilla' 2731 'UPL/PPL' 2790 'UPL/Otros'
+2795 'UPL/Voto nulo' 2796 'UPL/En blanco' 2797 'UPL/Abstención' 2829 'Caballas/MDyC' 2830 'Caballas/Coalición por Melilla'
+2831 'Caballas/PPL' 2890 'Caballas/Otros' 2895 'Caballas/Voto nulo' 2896 'Caballas/En blanco'
+2897 'Caballas/Abstención' 2930 'MDyC/Coalición por Melilla' 2931 'MDyC/PPL' 2990 'MDyC/Otros'
+2995 'MDyC/Voto nulo' 2996 'MDyC/En blanco' 2997 'MDyC/Abstención' 3031 'Coalición por Melilla/PPL'
+3090 'Coalición por Melilla/Otros' 3095 'Coalición por Melilla/Voto nulo' 3096 'Coalición por Melilla/En blanco'
+3097 'Coalición por Melilla/Abstención' 3190 'PPL/Otros' 3195 'PPL/Voto nulo' 3196 'PPL/En blanco'
+3197 'PPL/Abstención' 9095 'Otros/Voto nulo' 9096 'Otros/En blanco' 9097 'Otros/Abstención'
+9596 'Voto nulo/En blanco' 9597 'Voto nulo/Abstención' 9697 'En blanco/Abstención' 9994 'Otras respuestas'
+9999 'N.C.'
+/P11R
+1 'PP' 2 'PSOE' 3 'IU (Unidad Popular)' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (Democràcia i Llibertat)'
+8 'ERC' 10 'Unió' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 16 'BNG (Nós-Candidatura Galega)' 18 'CC'
+20 'Compromís-Podemos-És el Moment' 24 'MES' 25 'PI' 43 'En Comú Podem' 45 'En Marea' 90 'Otro'
+95 'Voto nulo' 96 'En blanco' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/P12R
+1 'PP' 2 'PSOE' 3 'IU (Unidad Popular)' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (Democràcia i Llibertat)'
+8 'ERC' 10 'Unió' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 16 'BNG (Nós-Candidatura Galega)' 18 'CC'
+20 'Compromís-Podemos-És el Moment' 24 'MES' 25 'PI' 43 'En Comú Podem' 45 'En Marea' 90 'Otro'
+97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/VOTOSIM
+1 'PP' 2 'PSOE' 3 'IU (Unidad Popular)' 4 'UPyD' 5 'Ciudadanos' 6 'Podemos' 7 'Convergència (Democràcia i Llibertat)'
+8 'ERC' 10 'Unió' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 16 'BNG (Nós-Candidatura Galega)' 18 'CC'
+20 'Compromís-Podemos-És el Moment' 24 'MES' 25 'PI' 43 'En Comú Podem' 45 'En Marea' 90 'Otro'
+95 'Voto nulo' 96 'En blanco' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/RECUERDO
+1 'PP' 2 'PSOE' 3 'IU (en Cataluña ICV)' 4 'UPyD' 5 'CiU' 15 'Otros' 77 'Voto nulo' 95 'No tenía edad'
+96 'En blanco' 97 'No votó' 98 'No recuerda' 99 'N.C.'
+/RVAUTON
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'UPyD' 7 'Junts pel Sí' 9 'Catalunya Sí que es Pot'
+10 'Unió' 11 'CUP' 12 'PNV' 13 'EH Bildu' 14 'Geroa Bai' 15 'UPN' 16 'BNG' 17 'Anova (Alternativa Galega de Esquerdas)'
+18 'CC' 19 'Nueva Canarias' 20 'Compromís' 21 'FAC (Foro de Ciudadanos)' 22 'PAR (Partido Aragonés)'
+23 'CHA' 24 'PSM-Entesa/MES' 25 'PI (Proposta per les Illes)' 26 'PRC (Partido Regionalista de Cantabria)'
+27 'UPL (Unión del Pueblo Leonés)' 28 'Caballas' 29 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+30 'Coalición por Melilla' 31 'PPL (Populares en Libertad)' 90 'Otro' 77 'Voto nulo' 95 'No tenía edad'
+96 'En blanco' 97 'No votó' 98 'No recuerda' 99 'N.C.'
+/ESTUDIOS
+1 'Sin estudios' 2 'Primaria' 3 'Secundaria 1ª etapa' 4 'Secundaria 2ª etapa' 5 'F.P.' 6 'Superiores'
+7 'Otros' 9 'N.C.'
+/PESO
+/PESOCCAA
+/E2
+1 'Lunes' 2 'Martes' 3 'Miércoles' 4 'Jueves' 5 'Viernes' 6 'Sábado' 7 'Domingo'
+.
+EXECUTE.
+
+MISSING VALUES
+ P0B (0) P10A (0) P10B01 (0) P10B02 (0) P20A (0) P26A (0) P29A (0) P32A (0) P32B (0) P37A (0)
+ C1A (0) P10BCOM (0).
+EXECUTE.
+
+WEIGHT BY PESO.
+*WEIGHT BY PESOCCAA.
+
+FREQUENCIES VARIABLES ALL.
