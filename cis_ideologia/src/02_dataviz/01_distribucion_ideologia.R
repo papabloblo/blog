@@ -137,7 +137,7 @@ p <- ideologia %>%
     x       = "Escala ideológica"
   )
 
-ggsave("cis_ideologia/dataviz/ditribucion_ideologia.png", plot = p, dpi = 400, width = 20, height = 30, units = "cm")
+ggsave("cis_ideologia/dataviz/distribucion_ideologia.png", plot = p, dpi = 400, width = 20, height = 30, units = "cm")
 
 ideologia %>% 
   filter(partido == "Congreso", ideologia <= 10, anyo >= 2016) %>% 
