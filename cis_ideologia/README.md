@@ -14,4 +14,4 @@ La **idea** es visualizar cuál es la **distribución igeológica de cada partid
 
 # Gráficos
 
-<img src="dataviz/distribucion_ideologia.png" width="60%">
+<img src="dataviz/distribucion_ideologia_1.png" width="60%">
