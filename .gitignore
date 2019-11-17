@@ -4,3 +4,4 @@
 .Ruserdata
 ola_calor/api_key.R
 bicis/data/*
+!bicis/data/data-warehouse.db
